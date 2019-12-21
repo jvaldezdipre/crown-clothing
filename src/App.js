@@ -1,4 +1,6 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+
 import "./App.css";
 
 import Home from "./pages/home/Home";
@@ -6,7 +8,9 @@ import Home from "./pages/home/Home";
 function App() {
   return (
     <div>
-      <Home />
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
     </div>
   );
 }
